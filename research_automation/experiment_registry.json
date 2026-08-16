@@ -1,0 +1,10 @@
+{
+  "project": "SURF2026",
+  "schema_version": "1.0",
+  "current_best": {
+    "accuracy": null,
+    "runtime": null,
+    "overall": null
+  },
+  "experiments": []
+}
