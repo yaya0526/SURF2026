@@ -1,0 +1,32 @@
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Large serialized artifacts
+*.pkl
+*.joblib
+*.pickle
+
+# Raw data must remain outside Git history unless explicitly approved
+data/raw/
+
+# Temporary outputs
+*.tmp
+*.log
