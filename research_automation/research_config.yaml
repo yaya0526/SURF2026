@@ -1,0 +1,75 @@
+project:
+  name: SURF2026
+  purpose: Reproducible computational research in numerical methods for derivative pricing
+  repository: yaya0526/SURF2026
+  default_branch: main
+
+research:
+  primary_problem: American option pricing
+  current_focus: Numerical methods, benchmarks, accuracy, runtime, convergence and robustness
+  immutable_paths:
+    - data/raw/
+  generated_paths:
+    - research_automation/experiments/
+    - research_automation/results/
+    - research_automation/reports/
+    - research_automation/improvement/
+
+experiment_policy:
+  require_unique_experiment_id: true
+  preserve_failed_experiments: true
+  never_overwrite_previous_results: true
+  require_reproducibility_metadata: true
+  require_self_critique: true
+  require_next_experiment: true
+
+required_metadata:
+  - experiment_id
+  - timestamp
+  - hypothesis
+  - baseline
+  - benchmark
+  - method
+  - parameters
+  - data_reference
+  - code_reference
+  - command
+  - seed
+  - runtime
+  - metrics
+  - interpretation
+  - limitations
+  - self_critique
+  - next_experiment
+
+benchmark_metrics:
+  - price
+  - absolute_error
+  - relative_error
+  - runtime_seconds
+  - iterations
+  - convergence_status
+
+version_control:
+  commit_after_meaningful_experiment: true
+  push_after_successful_commit: true
+  commit_prefixes:
+    - feat
+    - experiment
+    - benchmark
+    - fix
+    - analysis
+    - docs
+    - refactor
+
+excluded_from_git:
+  - data/raw/
+  - .env
+  - .venv/
+  - venv/
+  - __pycache__/
+  - .DS_Store
+  - '*.pyc'
+  - '*.pkl'
+  - '*.joblib'
+  - credentials/
